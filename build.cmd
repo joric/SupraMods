@@ -1,14 +1,9 @@
 @echo off
+set UnrealEnginePath=E:\UE_5.6
 
-set modname=SupraMods
-
-set src=src\Windows\%modname%\Content\Paks
-set dest=E:\Games\Supraworld\Supraworld\Content\Paks\LogicMods
-
-set chunk=69
-
-copy %src%\pakchunk%chunk%-Windows.pak  %dest%\%modname%.pak
-copy %src%\pakchunk%chunk%-Windows.ucas %dest%\%modname%.ucas
-copy %src%\pakchunk%chunk%-Windows.utoc %dest%\%modname%.utoc
-
-copy %dest%\%modname%.* dist\Supraworld\Content\Paks\LogicMods
+"%UnrealEnginePath%/Engine/Build/BatchFiles/RunUAT.bat" BuildCookRun ^
+ -project="%~dp0/src/SupraMods.uproject" ^
+ -noP4 -clientconfig=Shipping -serverconfig=Shipping ^
+ -platform=Win64 ^
+ -cook -allmaps -build -stage -pak -archive ^
+ -archivedirectory="%~dp0/src/Windows" && call install.cmd
