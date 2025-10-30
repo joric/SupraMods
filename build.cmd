@@ -6,4 +6,4 @@ set UnrealEnginePath=E:\UE_5.6
  -noP4 -clientconfig=Shipping -serverconfig=Shipping ^
  -platform=Win64 ^
  -cook -allmaps -build -stage -pak -archive ^
- -archivedirectory="%~dp0/src/Windows" && call install.cmd
+ -archivedirectory="%~dp0/src/Windows"
