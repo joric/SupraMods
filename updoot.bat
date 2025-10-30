@@ -4,3 +4,4 @@ git add src/Content
 git add src/Plugins
 git add src/*.uproject
 git add src/.gitignore
+git up
