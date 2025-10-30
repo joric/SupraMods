@@ -4,6 +4,3 @@ git add src/Content
 git add src/Plugins
 git add src/*.uproject
 git add src/.gitignore
-git add updoot.bat
-git add build.cmd
-git add README.md
